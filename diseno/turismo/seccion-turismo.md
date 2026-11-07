@@ -4,13 +4,13 @@ Estado: diseño para aprobación de Oscar. Fecha: 2026-11-07. Relacionado con #4
 
 ## Referencia visual y alcance
 
-El repositorio main consultado contiene únicamente una portada «Web de reservas en construcción», con fondo neutral oscuro y texto blanco. No hay una guía de estilo aprobada ni una versión completa verificable. Esta propuesta es provisional: mantiene marca, sencillez y contraste; cuando Oscar facilite la versión nueva, heredar sus colores, tipografía y componentes antes de implementar. No sustituye el logo ni cambia el formulario de reservas.
+Referencia visual verificada: https://app.transfersvipluxe.com/ (2026-11-07). La versión publicada usa fondo azul noche, títulos Playfair Display, texto sans serif y acciones doradas. Se mantiene ese lenguaje visual y la prioridad del formulario. La sección se sitúa después de «Viaja tranquilo» y antes del pie, sin alterar el hero ni la reserva. La ilustración de la portada no se repite: la sección usa un fondo oscuro liso para dar descanso visual. El main de GitHub consultado está menos actualizado que esta versión publicada. No se cambia el logo ni el formulario.
 
 Entregables: esta especificación, catálogo editorial en catalogo.md y maquetas PNG turismo-movil.png (390 px) y turismo-escritorio.png (1440 px). Las maquetas representan el resumen de inicio, no un catálogo completo ni una web funcional. Los textos son propuestas para diseño; Claude desarrolla los definitivos y las seis traducciones.
 
 ## Entrada y composición
 
-En la navegación: «Descubre». En móvil, dentro del menú existente; no añadir una segunda barra. En inicio, después de la reserva y de la flota, insertar un único bloque editorial. La reserva conserva prioridad.
+En la navegación: «Descubre». En móvil, dentro del menú existente; no añadir una segunda barra. En inicio, después de «Viaja tranquilo», insertar un único bloque editorial. La reserva conserva prioridad.
 
 Título: «Tu viaje empieza aquí».
 Entradilla: «Playas, historia y planes en familia. Descubre la Costa Dorada y encuentra tu próximo destino.»
@@ -33,15 +33,15 @@ Orden de lectura:
 
 ## Diseño medible provisional
 
-Paleta: cabecera y títulos #171717; fondo #FAFAFA; tarjetas #FFFFFF; texto secundario #525252; borde de tarjeta #D4D4D4; borde de controles #737373; acción #00689D con blanco #FFFFFF; acción al pasar #00527D; foco #00689D con separación blanca de 2 px y contorno de 3 px. El color de acción tiene contraste aproximado 6:1 frente a blanco. No comunicar un estado solo por color.
+Paleta de continuidad con la web publicada, concretada para la sección: fondo #0B1020; cabecera y cierre #080D19; tarjetas #131A2D; títulos #FFFFFF; texto secundario #CBD5E1; bordes #334155; enlaces y acento #F5D565; botón #F5D565 con texto #0B1020; botón encima #FFE58A; foco #F5D565 con separación de 2 px y contorno de 3 px. Texto claro sobre oscuro y texto oscuro sobre dorado. Mantener las variables equivalentes existentes si Claude dispone del código desplegado. Los bordes decorativos no deben ser la única señal para identificar un control. No comunicar estados solo por color.
 
-Google Fonts: Noto Sans, con soporte latino y cirílico. Texto 16/26 px peso 400; etiquetas 14/20 px peso 500; botones 16/24 px peso 600. Título principal móvil 32/40 px peso 700, escritorio 44/54 px; títulos de sección 24/32 móvil, 30/40 escritorio; tarjetas 20/28 px peso 600. Heredar los tipos definitivos de la nueva web cuando estén disponibles.
+Títulos: Google Fonts Playfair Display, peso 700, como la web publicada. Texto y controles: Noto Sans 400/600 como propuesta de Google Fonts equivalente al sans serif existente, con soporte cirílico; mantener el sans serif existente si Oscar quiere continuidad exacta. No cambiar globalmente las fuentes desde esta tarea. Texto 16/26 px; etiquetas 14/20 px; botones 16/24 px. Título principal móvil 32/40 px, escritorio 44/54 px; sección 24/32 móvil y 30/40 escritorio; títulos de tarjeta 20/28 px. Playfair Display y Noto Sans deberán cargarse con cobertura cirílica al implementar.
 
 Móvil 390 px: márgenes laterales 20 px, contenido 350 px; una columna, con dos tarjetas destacadas y dos enlaces compactos a los otros destinos; separación entre bloques 48 px, tarjetas 16 px; padding de tarjeta 20 px; fotos 350 × 180 px; controles de al menos 48 px de alto. No usar carruseles ni deslizamiento horizontal para acceder a contenido esencial. Los listados largos muestran un resumen y enlace al catálogo, sin ocultar contenido tras hover.
 
-Escritorio 1440 px: contenido máximo 1200 px centrado, márgenes 120 px; cuatro destinos en columnas de 282 px con huecos de 24 px, fotos de 282 × 160 px. Aeropuertos y servicios comparten una franja de dos columnas; excursiones en dos columnas de 588 px. Padding vertical 64 px. Radios: tarjeta 12 px, foto 12 px arriba, botón 8 px. Sin sombras fuertes ni degradados. Espaciado: 4, 8, 12, 16, 24, 32, 48, 64 px.
+Escritorio 1440 px: contenido máximo 1200 px centrado, márgenes 120 px; cuatro destinos en columnas de 282 px con huecos de 24 px, fotos de 282 × 160 px. Aeropuertos y servicios comparten una franja de dos columnas; excursiones en dos columnas de 588 px. Padding vertical 64 px. Radios: tarjeta 12 px, foto 12 px arriba, botón 8 px. Sin sombras fuertes; el fondo de esta sección será liso y oscuro. El botón puede heredar el degradado dorado existente; las maquetas muestran su equivalente liso. Espaciado: 4, 8, 12, 16, 24, 32, 48, 64 px.
 
-Tarjetas: altura según contenido; títulos y descripciones completos, sin truncar. En la misma fila, alinear acciones al pie. Normal: borde #D4D4D4; encima: borde #00689D sin mover la tarjeta; foco visible en la acción; no hacer la tarjeta entera clicable si contiene otras acciones.
+Tarjetas: altura según contenido; títulos y descripciones completos, sin truncar. En la misma fila, alinear acciones al pie. Normal: borde #334155; encima: borde #F5D565 sin mover la tarjeta; foco visible en la acción; no hacer la tarjeta entera clicable si contiene otras acciones.
 
 ## Seis idiomas y accesibilidad
 
